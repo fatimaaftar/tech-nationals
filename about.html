@@ -6,6 +6,62 @@
   <title>About | Tech Nationals</title>
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
+  <style>
+    /* Make footer stick to bottom */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+    }
+    /* Simple slider styles */
+    .slider-container {
+      max-width: 900px;
+      margin: 2rem auto 0 auto;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(80,80,180,0.08);
+      background: #fff;
+      position: relative;
+    }
+    .slider-track {
+      display: flex;
+      width: calc(300px * 5);
+      animation: slide 18s linear infinite;
+    }
+    .slider-track img {
+      width: 300px;
+      height: 180px;
+      object-fit: cover;
+      margin-right: 10px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(37,117,252,0.10);
+    }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-1550px); }
+    }
+    @media (max-width: 700px) {
+      .slider-track img {
+        width: 200px;
+        height: 120px;
+      }
+      .slider-track {
+        width: calc(200px * 5);
+      }
+      @keyframes slide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-1050px); }
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -29,12 +85,50 @@
     <section class="about-section">
       <div class="container about-flex">
         <div class="about-img">
-          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=500&q=80" alt="About Tech Nationals" />
+          <img src="tech.jpg" alt="about us">
         </div>
         <div class="about-text">
-          <h2>About Us</h2>
-          <p>Tech Nationals is a leading provider of IT solutions, helping businesses grow and adapt in the digital era. Our team of experts delivers tailored services to meet your unique needs.</p>
-          <p>Founded in 2015, we have worked with startups and enterprises across the globe, building a reputation for reliability and innovation.</p>
+          <h2>About Tech Nationals</h2>
+          <p>
+            <strong>Tech Nationals</strong> is a forward-thinking IT company dedicated to delivering innovative digital solutions. Since our founding in 2015, we have empowered businesses worldwide to embrace technology and achieve their goals.
+          </p>
+          <h3>Our Mission</h3>
+          <p>
+            To provide reliable, scalable, and creative technology services that help our clients grow and succeed in a rapidly changing digital landscape.
+          </p>
+          <h3>What Sets Us Apart?</h3>
+          <ul>
+            <li>Cutting-edge web and app development</li>
+            <li>Expert consulting and IT strategy</li>
+            <li>Customer-first approach and 24/7 support</li>
+            <li>Proven track record with startups and enterprises</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="company-details" style="text-align:center; margin:2rem 0;">
+      <div class="container">
+        <h2>Our Values</h2>
+        <p>
+          We believe in innovation, transparency, and partnership. Our team is passionate about solving real-world problems with technology and building long-term relationships with our clients.
+        </p>
+        <h3>Global Reach</h3>
+        <p>
+          With clients in over 15 countries, Tech Nationals is proud to be a trusted technology partner for businesses of all sizes.
+        </p>
+      </div>
+    </section>
+    <section class="slider-section">
+      <div class="container">
+        <h2 style="text-align:center; color:var(--primary); margin-bottom:1.5rem;">Life at Tech Nationals</h2>
+        <div class="slider-container">
+          <div class="slider-track">
+            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Office 1" />
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Office 2" />
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Teamwork" />
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="App Development" />
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Web Development" />
+          </div>
         </div>
       </div>
     </section>
